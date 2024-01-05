@@ -1,8 +1,5 @@
 const dictionary = require('./dictionary.json');
 
-const letters = process.argv[2];
-const specialLetter = process.argv[3]
-
 const TIME_LABEL = 'Time spent searching'
 
 const findWordsInEnglish = ({ letters, specialLetter }, words = dictionary) => {
@@ -23,6 +20,8 @@ const findWordsInEnglish = ({ letters, specialLetter }, words = dictionary) => {
   });
 };
 
+const letters = process.argv[2];
+const specialLetter = process.argv[3]
 
 console.time(TIME_LABEL);
 const result = findWordsInEnglish({ letters, specialLetter });
